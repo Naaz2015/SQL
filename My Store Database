@@ -1,0 +1,26 @@
+--create clotging store database
+
+CREATE TABLE MyStore (id INTEGER PRIMARY KEY,product TEXT,quantity Numeric,collection TEXT,Price INTEGER);
+
+INSERT INTO Mystore VALUES (1,"Tshirts",11,"Joan",9.99);
+INSERT INTO Mystore VALUES (2,"Tanktops",12,"Rafiki",4.99);
+INSERT INTO Mystore VALUES (3,"Jeans",13,"Roy",15.99);
+INSERT INTO Mystore VALUES (4,"Belts",14,"Zazu",10.99);
+INSERT INTO MYstore VALUES (5,"scrafs",15,"Sam",7.99);
+INSERT INTO Mystore VALUES (6,"socks",16,"Joan",3.99);
+INSERT INTO Mystore VALUES (7,"Pants",17,"Roy",19.99);
+INSERT INTO Mystore VALUES (8,"shoes",18,"Zazu",12.99);
+INSERT INTO Mystore VALUES (9,"Hats",19,"Sam",5.99);
+INSERT INTO Mystore VALUES (10,"Coats",20,"Rafiki",25.99);
+INSERT INTO Mystore VALUES (11,"jackets",11,"Joan",29.99);
+INSERT INTO Mystore VALUES (12,"Shorts",17,"Zazu",5.99);
+INSERT INTO MYstore VALUES (13,"Pjs",12,"Sam",9.99);
+INSERT INTO Mystore VALUES (14,"Slippers",18,"Zazu",6.99);
+INSERT INTO Mystore VALUES (15,"neckless",15,"Sam",8.99); 
+
+--display the database by price
+SELECT * FROM MyStore WHERE price >1 
+ORDER BY price;
+
+--quantity of all the items by products
+SELECT  SUM (quantity) FROM Mystore GROUP by product;
