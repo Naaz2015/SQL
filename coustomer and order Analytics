@@ -21,6 +21,12 @@ on cust.order_ID = feb.orderid
 WHERE length (orderID)=6
 AND orderID <> 'OrderID';
 
+--List of how many products sold in feb in los angeles
+
+SELECT product,SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE location like '% los angeles%'
+GROUP BY product
 
 --Cheapest product sold in jan and its price
 
